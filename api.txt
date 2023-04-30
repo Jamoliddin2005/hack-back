@@ -1,0 +1,53 @@
+/categories
+{
+  new: [Categoriya],
+  old: [Categoriya]
+}
+
+/list
+[
+  Lists
+]
+
+/verify
+{
+  token: boolean
+}
+
+/api/admin/auth
+auth
+
+/team/create
+req.body = { name, img, matchCount?, score? }
+
+/team/update/:id
+req.body = { name, img, matchCount?, score? }
+req.params.id = team id
+
+/team
+[Team]
+
+/category
+[Categories]
+
+/category/create
+req.body = { name } 
+
+/category/create/new/team/:id
+req.body = { team1, team2, time }
+
+/category/create/old/team/:id
+req.body = { team1, team2, score1, score2, time }
+
+/category/update/name/:id
+{ name }
+
+/category/update/team/:id/:teamId
+const { id, teamId } = req.params;
+const { team1, team2, score1, score2, time } = req.body;
+
+/category/delete/:id
+const id = req.params.id;
+
+/category/delete/:id/:teamId
+const { id, teamId } = req.params;
